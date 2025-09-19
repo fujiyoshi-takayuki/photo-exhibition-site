@@ -171,6 +171,18 @@ a.button:hover {
   font-weight: bold;
 }
 
+/* DM画像のスタイル */
+.dm-image {
+  text-align: center;   /* 中央寄せ */
+  margin: 2em 0;        /* 上下に余白を入れる（お好みで） */
+}
+
+.dm-image img {
+  max-width: 100%;      /* 画面幅を超えないようにする */
+  height: auto;         /* アスペクト比を維持 */
+  border-radius: 8px;   /* 角を少し丸める（お好みで） */
+}
+
 .work-card p {
   margin: 0;
   font-size: 14px;
