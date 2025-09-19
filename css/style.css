@@ -171,6 +171,47 @@ a.button:hover {
   font-weight: bold;
 }
 
+/* 作品番号とタイトルの位置調整 */
+.work-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;   /* 上に画像、下にテキスト */
+  justify-content: space-between;
+  height: 100%;
+}
+
+.work-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  flex-grow: 1;
+  object-fit: cover;
+}
+
+.work-info {
+  padding: 0.5em;
+  border-top: 1px solid #eee;
+}
+
+.work-number {
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+
+.work-title {
+  font-size: 1.1em;
+  margin: 0.2em 0;
+}
+
+.work-author {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0.2em 0;
+}
+
 /* DM画像のスタイル */
 .dm-image {
   text-align: center;   /* 中央寄せ */
