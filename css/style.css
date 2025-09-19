@@ -263,6 +263,20 @@ a.button:hover {
 .second { border: 3px solid silver; }
 .third { border: 3px solid #cd7f32; } /* 銅色 */
 
+.work-number {
+  display: block;       /* 改行して表示 */
+  font-weight: bold;    /* 太字で強調 */
+  font-size: 0.95em;    /* 少し小さめ */
+  color: #444;          /* 落ち着いた色 */
+}
+
+.work-title {
+  display: block;       /* 改行して表示 */
+  font-size: 1.1em;     /* 少し大きめで目立たせる */
+  color: #222;          /* 文字を濃くして見やすく */
+  margin-top: 0.2em;    /* 上に余白を少し */
+}
+
 /* 　特別な修飾　 */
 .notice {
   text-align: center;
