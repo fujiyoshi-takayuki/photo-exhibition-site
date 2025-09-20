@@ -413,6 +413,7 @@ a.button:hover {
 
 /* ヘッダー（上書き） */
 #main-header {
+  position: relative;
   background: #333;
   color: white;
   height: 70px; /* 固定高さ */
