@@ -402,16 +402,20 @@ a.button:hover {
   }
 }
 
-/* 上段ヘッダー*/
-#main-header {
+/* ラッパーを追加（追記） */
+#header-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #333;             /* 濃いグレー（黒寄り） */
+  z-index: 1000;
+}
+
+/* ヘッダー（上書き） */
+#main-header {
+  background: #333;
   color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  z-index: 1000;
   transition: top 0.3s;
 }
 
@@ -438,15 +442,9 @@ a.button:hover {
   color: #ccc;
 }
 
-/* ナビゲーション */
+/* ナビゲーション（上書き） */
 .navbar {
-  position: fixed;
-  top: 0;                  /* ヘッダー高さに合わせる */
-  left: 0;
-  width: 100%;
-  background: #555;           /* ← 明るめのグレー */
-  z-index: 999;
-  margin-top: 70px; /* ヘッダー分の余白 */
+  background: #555;
 }
 
 .navbar ul {
@@ -465,10 +463,10 @@ a.button:hover {
 }
 
 .navbar a:hover {
-  background: #777;           /* ホバー時さらに明るく */
+  background: #777;
 }
 
-/* 本文に余白を与える */
+/* 本文位置（上書き） */
 main {
-  margin-top: 120px; /* ヘッダーとナビ分の余白 */
+  margin-top: 120px; /* ヘッダー＋ナビ分下げる */
 }
