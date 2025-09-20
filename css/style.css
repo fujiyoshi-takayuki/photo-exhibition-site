@@ -318,9 +318,10 @@ a.button:hover {
 /* 結果ギャラリー */
 .results-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5em;       /* カード間の余白 */
   margin-top: 1em;
+  padding: 0 1em;   /* 左右に少し余白 */
 }
 
 .result-card {
@@ -342,32 +343,32 @@ a.button:hover {
   display: block;
 }
 
-.work-info {
+.result-info {
   padding: 0.5em;
   background: #f5f5f5;
   border-top: 1px solid #ddd;
 }
 
-.work-number {
+.result-number {
   font-weight: bold;
   margin-right: 0.5em;
 }
 
-.work-title {
+.result-title {
   color: #333;
 }
 
 /* 順位ごとの色付き影 */
 .result-card.first {
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.7);   /* 金 */
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7);   /* 金 */
 }
 
 .result-card.second {
-  box-shadow: 0 4px 10px rgba(192, 192, 192, 0.7); /* 銀 */
+  box-shadow: 0 4px 12px rgba(192, 192, 192, 0.7); /* 銀 */
 }
 
 .result-card.third {
-  box-shadow: 0 4px 10px rgba(205, 127, 50, 0.7);  /* 銅 */
+  box-shadow: 0 4px 12px rgba(205, 127, 50, 0.7);  /* 銅 */
 }
 
 .work-number {
