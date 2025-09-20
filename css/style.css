@@ -137,8 +137,8 @@ a.button:hover {
 /* ギャラリー全体 */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 最小幅を狭める */
-  gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 最小幅を狭める */
+  gap: 2em;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -147,9 +147,13 @@ a.button:hover {
 .work-card {
   background: white;
   padding: 1em;
-  border-radius: 10px; /* ← 少し角丸を強調 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* ← 影を少し濃く大きく */
+  border-radius: 8px; /* ← 少し角丸を強調 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ← 影を少し濃く大きく */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   transition: 0.3s; /* ← アニメーション追加 */
 }
 
