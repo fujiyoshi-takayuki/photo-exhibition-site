@@ -3,18 +3,27 @@ const header = document.getElementById("main-header");
 const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY <= 0) {
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollTop <= 0) {
     // ページ最上部
     header.style.top = "0";
-    navbar.style.top = "70px"; // ヘッダーの下
-  } else if (window.scrollY > lastScrollY) {
-    // 下スクロール → ヘッダー隠す
+    navbar.style.top = "70px";
+  } else if (scrollTop + windowHeight >= docHeight) {
+    // ページ最下部 → ヘッダーは隠したまま、ナビは上に吸着
     header.style.top = "-70px";
-    navbar.style.top = "0"; // ナビが最上部に吸い付く
+    navbar.style.top = "0";
+  } else if (scrollTop > lastScrollY) {
+    // 下スクロール中 → ヘッダー隠す、ナビ最上部
+    header.style.top = "-70px";
+    navbar.style.top = "0";
   } else {
-    // 上スクロール → ヘッダー表示
+    // 上スクロール中 → ヘッダー表示、ナビを下げる
     header.style.top = "0";
-    navbar.style.top = "70px"; // 押し出されて下にずれる
+    navbar.style.top = "70px";
   }
-  lastScrollY = window.scrollY;
+
+  lastScrollY = scrollTop;
 });
