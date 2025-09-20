@@ -315,43 +315,60 @@ a.button:hover {
 }
 
 /* 結果概要用ギャラリー+順位強調 */
-.results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-  margin-top: 2em;
+/* 結果ギャラリー */
+.results-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  margin-top: 1em;
 }
 
 .result-card {
   background: white;
-  padding: 1em;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
   text-align: center;
-  width: 220px;
+  transition: transform 0.3s;
+}
+
+.result-card:hover {
+  transform: scale(1.03);
 }
 
 .result-card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 6px;
-  margin-bottom: 0.5em;
-  transition: transform 0.2s;
+  display: block;
 }
 
-.result-card img:hover {
-  transform: scale(1.05); /* ホバーで少し拡大 */
+.work-info {
+  padding: 0.5em;
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
 }
 
-.result-card h3 {
-  margin-bottom: 0.5em;
-  font-size: 1.2em;
+.work-number {
+  font-weight: bold;
+  margin-right: 0.5em;
 }
 
-.first { border: 3px solid gold; }
-.second { border: 3px solid silver; }
-.third { border: 3px solid #cd7f32; } /* 銅色 */
+.work-title {
+  color: #333;
+}
+
+/* 順位ごとの色付き影 */
+.result-card.first {
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.7);   /* 金 */
+}
+
+.result-card.second {
+  box-shadow: 0 4px 10px rgba(192, 192, 192, 0.7); /* 銀 */
+}
+
+.result-card.third {
+  box-shadow: 0 4px 10px rgba(205, 127, 50, 0.7);  /* 銅 */
+}
 
 .work-number {
   display: block;       /* 改行して表示 */
