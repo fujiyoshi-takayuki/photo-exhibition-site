@@ -488,7 +488,9 @@ main {
   display: inline-block;
   background: darkblue;
   color: white;
-  padding: 0.6em 1.2em;
+  padding: 0.8em 2em;   /* ← 横幅を広げる */
+  min-width: 200px;     /* ← 最低幅を揃える */
+  text-align: center;   /* ← テキスト中央寄せ */
   margin: 0.3em;
   border-radius: 6px;
   text-decoration: none;
