@@ -325,6 +325,9 @@ a.button:hover {
 }
 
 .result-card {
+  display: flex;
+  flex-direction: column;   /* 縦に分割 */
+  justify-content: space-between; /* 上＝画像 / 下＝情報 */
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -333,14 +336,17 @@ a.button:hover {
   transition: transform 0.3s;
 }
 
-.result-card:hover {
-  transform: scale(1.03);
-}
-
 .result-card img {
   width: 100%;
   height: auto;
   display: block;
+  flex-grow: 1; /* ← 画像部分が余白を埋める */
+}
+
+.result-info {
+  padding: 0.5em;
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
 }
 
 .result-info {
