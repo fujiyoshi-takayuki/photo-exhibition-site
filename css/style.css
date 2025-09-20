@@ -421,7 +421,8 @@ a.button:hover {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transition: top 0.3s;
+  transition: top 0.25s ease; /* スムーズに動かす */
+  z-index: 1000;
 }
 
 .header-content {
@@ -454,7 +455,7 @@ a.button:hover {
   left: 0;
   width: 100%;
   background: #555;
-  transition: top 0.3s; /* スムーズに動かす */
+  transition: top 0.25s ease; /* スムーズに動かす */
   z-index: 999;
 }
 
