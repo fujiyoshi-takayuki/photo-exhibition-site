@@ -59,10 +59,12 @@ main {
 }
 
 footer {
-  background: #ccc;
+  background: #ddd;
   text-align: center;
   padding: 1.5em;
   margin-top: 2em;
+  font-size: 0.9em;
+  color: #333;
 }
 
 footer {
