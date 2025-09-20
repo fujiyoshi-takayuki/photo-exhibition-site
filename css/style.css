@@ -449,7 +449,13 @@ a.button:hover {
 
 /* ナビゲーション（上書き） */
 .navbar {
+  position: fixed;
+  top: 70px;  /* ヘッダーがあるときは下に配置 */
+  left: 0;
+  width: 100%;
   background: #555;
+  transition: top 0.3s; /* スムーズに動かす */
+  z-index: 999;
 }
 
 .navbar ul {
