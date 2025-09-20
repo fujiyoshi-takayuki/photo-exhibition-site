@@ -441,11 +441,12 @@ a.button:hover {
 /* ナビゲーション */
 .navbar {
   position: fixed;
-  top: 70px;                  /* ヘッダー高さに合わせる */
+  top: 0;                  /* ヘッダー高さに合わせる */
   left: 0;
   width: 100%;
   background: #555;           /* ← 明るめのグレー */
   z-index: 999;
+  margin-top: 70px; /* ヘッダー分の余白 */
 }
 
 .navbar ul {
