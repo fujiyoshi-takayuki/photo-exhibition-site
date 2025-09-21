@@ -515,7 +515,7 @@ main {
 
 /* スマホ向け上書き */
 /* スマホ画面幅（415px以下）の場合 */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 415px) {
   body {
     font-size: 40px; /* ベース文字を少し大きく */
   }
