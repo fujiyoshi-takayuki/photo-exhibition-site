@@ -411,7 +411,7 @@ a.button:hover {
 /* スマホ画面幅（600px以下）の場合 */
 @media (max-width: 600px) {
   body {
-    font-size: 16px; /* ベース文字を少し大きく */
+    font-size: 32px; /* ベース文字を少し大きく */
   }
   h2 {
     font-size: 1.5em; /* 見出しをやや小さめに調整して収まりを良く */
