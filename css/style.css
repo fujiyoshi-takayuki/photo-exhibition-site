@@ -407,25 +407,6 @@ a.button:hover {
   margin: 1em 0;
 }
 
-/* スマホ向け上書き */
-/* スマホ画面幅（600px以下）の場合 */
-@media (max-width: 600px) {
-  body {
-    font-size: 32px; /* ベース文字を少し大きく */
-  }
-  h2 {
-    font-size: 1.5em; /* 見出しをやや小さめに調整して収まりを良く */
-  }
-  .button {
-    padding: 1em 1.5em; /* ボタンのタップ領域を広げる */
-    font-size: 16px;
-  }
-  nav ul li a {
-    font-size: 24px;
-    padding: 1em 1.5em; /* ナビのタップ領域を広げる */
-  }
-}
-
 /* ラッパーを追加（追記） */
 #header-wrapper {
   position: fixed;
@@ -530,4 +511,23 @@ main {
 .link-buttons {
   text-align: center;
   margin-top: 1em;
+}
+
+/* スマホ向け上書き */
+/* スマホ画面幅（415px以下）の場合 */
+@media screen and (max-width: 415px) {
+  body {
+    font-size: 32px; /* ベース文字を少し大きく */
+  }
+  h2 {
+    font-size: 1.5em; /* 見出しをやや小さめに調整して収まりを良く */
+  }
+  .button {
+    padding: 1em 1.5em; /* ボタンのタップ領域を広げる */
+    font-size: 16px;
+  }
+  nav ul li a {
+    font-size: 24px;
+    padding: 1em 1.5em; /* ナビのタップ領域を広げる */
+  }
 }
