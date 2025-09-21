@@ -517,7 +517,7 @@ main {
 /* スマホ画面幅（415px以下）の場合 */
 @media screen and (max-width: 415px) {
   body {
-    font-size: 32px; /* ベース文字を少し大きく */
+    font-size: 40px; /* ベース文字を少し大きく */
   }
   h2 {
     font-size: 1.5em; /* 見出しをやや小さめに調整して収まりを良く */
