@@ -517,7 +517,7 @@ main {
 /* スマホ画面幅（415px以下）の場合 */
 @media screen and (max-width: 415px) {
   .navbar li {
-    font-size: 10px;
+    font-size: 8px;
     margin: 0;
   }
 }
