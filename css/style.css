@@ -513,6 +513,62 @@ main {
   margin-top: 1em;
 }
 
+/* ================================
+   お知らせセクション
+   ================================ */
+.c-section {
+  padding: 2em 1em;
+  background: #fafafa;
+  margin: 2em 0;
+  border-top: 2px solid #333;
+}
+
+.c-section__heading {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.c-section__heading--title span {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+}
+
+.c-section__heading--sub-title {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 0.3em;
+}
+
+.c-section__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.p-news {
+  margin: 0;
+  padding: 0;
+}
+
+.p-news__label {
+  font-weight: bold;
+  color: #555;
+  margin-top: 1em;
+}
+
+.p-news__content {
+  margin-left: 1em;
+}
+
+.p-news__content a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+.p-news__content a:hover {
+  text-decoration: underline;
+}
+
 /* スマホ向け上書き */
 /* スマホ画面幅（480px以下）の場合 */
 @media screen and (max-width: 480px) {
