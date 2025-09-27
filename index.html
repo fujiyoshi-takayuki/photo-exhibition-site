@@ -3,57 +3,61 @@ layout: default
 title: "法政大学 小金井写真部 写真展サイト &#8211; Hosei University Koganei Photography Club"
 ---
 
-    <h2>ようこそ</h2>
-    <p>このサイトでは、法政大学 小金井写真部の写真展（学祭・夏・冬）の作品を閲覧したり、投票したりすることができます。</p>
-    <p><strong>最新：</strong> <a href="2025/gakusai/">2025学祭写真展はこちら</a></p>
+<h2>ようこそ</h2>
+<p>
+  このサイトでは、法政大学
+  小金井写真部の写真展（学祭・夏・冬）の作品を閲覧したり、投票したりできます。
+</p>
+<p>
+  <strong>最新：</strong> <a href="2025/gakusai/">2025学祭写真展はこちら</a>
+</p>
 
-    <!-- お知らせセクション -->
-     <div class="c-section p-layout-container">
-      <h2 class="c-section__heading">
-        <div class="c-section__heading--title">
-          <span>
-            お知らせ
-          </span>
-        </div>
-        <div class="c-section__heading--subtitle">
-          INFORMATION
-        </div>
-      </h2>
-      <div class="c-section__container">
-        <ul>
-          {% for post in site.posts limit:5 %}
-            <li>{{ post.date | date: "%Y/%m/%d" }} <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <p style="text-align:center; margin-top:1em;">
-          <a href="news/list.html" class="button">もっと見る</a>
-        </p>
-      </div>
-     </div>
-
-    <h3>2025年度 写真展</h3>
-    <div class="year-block">
-      <div class="event-link">
-        <a href="2025/summer/">2025夏写真展</a>
-      </div>
-      <div class="event-link">
-        <a href="2025/gakusai/">2025学祭写真展（準備中）</a>
-      </div>
-      <div class="event-link">
-        <a href="2025/winter/">2025冬写真展（準備中）</a>
-      </div>
+<!-- お知らせセクション -->
+<div class="c-section p-layout-container">
+  <h2 class="c-section__heading">
+    <div class="c-section__heading--title">
+      <span> お知らせ </span>
     </div>
+    <div class="c-section__heading--subtitle">INFORMATION</div>
+  </h2>
+  <div class="c-section__container">
+    <ul>
+      {% for post in site.posts limit:5 %}
+      <li>
+        {{ post.date | date: "%Y/%m/%d" }}
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p style="text-align: center; margin-top: 1em">
+      <a href="news/list.html" class="button">もっと見る</a>
+    </p>
+  </div>
+</div>
 
-    <!-- 将来の例 -->
-    <h3>2026年度 写真展</h3>
-    <div class="year-block">
-      <div class="event-link">
-        <a href="2026/summer/">2026夏写真展（準備中）</a>
-      </div>
-      <div class="event-link">
-        <a href="#">2026学祭写真展（準備中）</a>
-      </div>
-      <div class="event-link">
-        <a href="#">2026冬写真展（準備中）</a>
-      </div>
-    </div>
+<h3>2025年度 写真展</h3>
+<div class="year-block">
+  <div class="event-link">
+    <a href="2025/summer/">2025夏写真展</a>
+  </div>
+  <div class="event-link">
+    <a href="2025/gakusai/">2025学祭写真展（準備中）</a>
+  </div>
+  <div class="event-link">
+    <a href="2025/winter/">2025冬写真展（準備中）</a>
+  </div>
+</div>
+
+<!-- 将来の例 -->
+<h3>2026年度 写真展</h3>
+<div class="year-block">
+  <div class="event-link">
+    <a href="2026/summer/">2026夏写真展（準備中）</a>
+  </div>
+  <div class="event-link">
+    <a href="#">2026学祭写真展（準備中）</a>
+  </div>
+  <div class="event-link">
+    <a href="#">2026冬写真展（準備中）</a>
+  </div>
+</div>
