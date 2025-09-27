@@ -10,9 +10,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #333;             /* 濃いグレー（黒寄り） */
+  background: #333; /* 濃いグレー（黒寄り） */
   color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: top 0.3s;
 }
@@ -22,6 +22,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0.5em 1em;
+}
+
+.header-content a {
+  color: white;
 }
 
 .logo {
@@ -43,10 +47,10 @@ body {
 /* ナビゲーション（固定表示・明るめグレー） */
 .navbar {
   position: fixed;
-  top: 70px;                  /* ヘッダー高さに合わせる */
+  top: 70px; /* ヘッダー高さに合わせる */
   left: 0;
   width: 100%;
-  background: #555;           /* ← 明るめのグレー */
+  background: #555; /* ← 明るめのグレー */
   z-index: 999;
 }
 
@@ -70,7 +74,7 @@ body {
 }
 
 .navbar a:hover {
-  background: #777;           /* ホバー時さらに明るく */
+  background: #777; /* ホバー時さらに明るく */
 }
 
 main {
@@ -158,7 +162,10 @@ a.button:hover {
 /* ギャラリー全体 */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 最小幅を狭める */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  ); /* 最小幅を狭める */
   gap: 2em;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -169,7 +176,7 @@ a.button:hover {
   background: white;
   padding: 1em;
   border-radius: 8px; /* ← 少し角丸を強調 */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ← 影を少し濃く大きく */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ← 影を少し濃く大きく */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -180,7 +187,7 @@ a.button:hover {
 
 .work-card:hover {
   transform: translateY(-5px); /* ← ホバーで浮き上がる */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* ← 影も強調 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ← 影も強調 */
 }
 
 .work-card img {
@@ -200,10 +207,10 @@ a.button:hover {
 .work-card {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: flex;
-  flex-direction: column;   /* 上に画像、下にテキスト */
+  flex-direction: column; /* 上に画像、下にテキスト */
   justify-content: space-between;
   height: 100%;
   margin-bottom: 1.5em;
@@ -232,17 +239,16 @@ a.button:hover {
   margin: 0.2em 0;
 }
 
-
 /* DM画像のスタイル */
 .dm-image {
-  text-align: center;   /* 中央寄せ */
-  margin: 2em 0;        /* 上下に余白を入れる（お好みで） */
+  text-align: center; /* 中央寄せ */
+  margin: 2em 0; /* 上下に余白を入れる（お好みで） */
 }
 
 .dm-image img {
-  max-width: 100%;      /* 画面幅を超えないようにする */
-  height: auto;         /* アスペクト比を維持 */
-  border-radius: 8px;   /* 角を少し丸める（お好みで） */
+  max-width: 100%; /* 画面幅を超えないようにする */
+  height: auto; /* アスペクト比を維持 */
+  border-radius: 8px; /* 角を少し丸める（お好みで） */
 }
 
 .work-card p {
@@ -255,18 +261,18 @@ a.button:hover {
 .button {
   display: inline-block;
   padding: 0.8em 1.5em;
-  background: #007bff;      /* 鮮やかな青 */
+  background: #007bff; /* 鮮やかな青 */
   color: white;
-  border-radius: 8px;       /* ← 角丸を強めて「押せる感」 */
+  border-radius: 8px; /* ← 角丸を強めて「押せる感」 */
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* ← 少し影を追加 */
-  transition: 0.3s;         /* ← ホバー時のアニメーション */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ← 少し影を追加 */
+  transition: 0.3s; /* ← ホバー時のアニメーション */
 }
 
 .button:hover {
-  background: #0056b3;      /* 濃い青に変化 */
+  background: #0056b3; /* 濃い青に変化 */
   transform: translateY(-2px); /* ← 浮き上がる効果 */
 }
 .vote-container {
@@ -319,18 +325,18 @@ a.button:hover {
 .results-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5em;       /* カード間の余白 */
+  gap: 1.5em; /* カード間の余白 */
   margin-top: 1em;
-  padding: 0 1em;   /* 左右に少し余白 */
+  padding: 0 1em; /* 左右に少し余白 */
 }
 
 .result-card {
   display: flex;
-  flex-direction: column;   /* 縦に分割 */
+  flex-direction: column; /* 縦に分割 */
   justify-content: space-between; /* 上＝画像 / 下＝情報 */
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s;
@@ -366,7 +372,7 @@ a.button:hover {
 
 /* 順位ごとの色付き影 */
 .result-card.first {
-  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7);   /* 金 */
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.7); /* 金 */
 }
 
 .result-card.second {
@@ -374,21 +380,21 @@ a.button:hover {
 }
 
 .result-card.third {
-  box-shadow: 0 4px 12px rgba(205, 127, 50, 0.7);  /* 銅 */
+  box-shadow: 0 4px 12px rgba(205, 127, 50, 0.7); /* 銅 */
 }
 
 .work-number {
-  display: block;       /* 改行して表示 */
-  font-weight: bold;    /* 太字で強調 */
-  font-size: 0.95em;    /* 少し小さめ */
-  color: #444;          /* 落ち着いた色 */
+  display: block; /* 改行して表示 */
+  font-weight: bold; /* 太字で強調 */
+  font-size: 0.95em; /* 少し小さめ */
+  color: #444; /* 落ち着いた色 */
 }
 
 .work-title {
-  display: block;       /* 改行して表示 */
-  font-size: 1.1em;     /* 少し大きめで目立たせる */
-  color: #222;          /* 文字を濃くして見やすく */
-  margin-top: 0.2em;    /* 上に余白を少し */
+  display: block; /* 改行して表示 */
+  font-size: 1.1em; /* 少し大きめで目立たせる */
+  color: #222; /* 文字を濃くして見やすく */
+  margin-top: 0.2em; /* 上に余白を少し */
 }
 
 /* 　特別な修飾　 */
@@ -425,7 +431,7 @@ a.button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: top 0.25s ease; /* スムーズに動かす */
   z-index: 1000;
 }
@@ -456,7 +462,7 @@ a.button:hover {
 /* ナビゲーション（上書き） */
 .navbar {
   position: fixed;
-  top: 70px;  /* ヘッダーがあるときは下に配置 */
+  top: 70px; /* ヘッダーがあるときは下に配置 */
   left: 0;
   width: 100%;
   background: #555;
@@ -493,9 +499,9 @@ main {
   display: inline-block;
   background: darkblue;
   color: white;
-  padding: 0.8em 2em;   /* ← 横幅を広げる */
-  min-width: 200px;     /* ← 最低幅を揃える */
-  text-align: center;   /* ← テキスト中央寄せ */
+  padding: 0.8em 2em; /* ← 横幅を広げる */
+  min-width: 200px; /* ← 最低幅を揃える */
+  text-align: center; /* ← テキスト中央寄せ */
   margin: 0.3em;
   border-radius: 6px;
   text-decoration: none;
@@ -587,7 +593,7 @@ body.password-page form {
   background: #fff;
   padding: 2em;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -610,11 +616,11 @@ body.password-page #password {
 /* スマホ画面幅（480px以下）の場合 */
 @media screen and (max-width: 480px) {
   .navbar ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.5em;
   }
   .navbar li {
     font-size: 12px;
