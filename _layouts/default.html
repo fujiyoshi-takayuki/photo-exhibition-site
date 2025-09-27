@@ -25,7 +25,7 @@
     <div class="header-content">
       <img src="{{ "/images/club-icon.JPG" | relative_url }}" alt="写真部アイコン" class="logo">
       <div class="site-title">
-        <h1>法政大学 小金井写真部</h1>
+        <h1><a href="{{ "/" | relative_url }}">法政大学 小金井写真部</a></h1>
         <p>写真展</p>
       </div>
     </div>
@@ -46,13 +46,13 @@
 
   <!-- フッター -->
 <footer>
-  <p>Copyright © 2025 法政大学 小金井写真部 All Rights Reserved.</p>
+  <p>Copyright &copy; 2025 法政大学 小金井写真部 All Rights Reserved.</p>
   <p>Designed by Takakichi</p>
   <div class="sns-links">
     <a href="https://www.instagram.com/photo_koganei" target="_blank">Instagram</a> |
     <a href="https://x.com/koganei_photo" target="_blank">X</a>
   </div>
 </footer>
-<script src="/photo-exhibition-site/js/script.js"></script>
+<script src="{{ "/js/script.js" | relative_url }}"></script>
 </body>
 </html>
