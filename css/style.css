@@ -491,14 +491,6 @@ a.button:hover {
   background: #777;
 }
 
-/* 有効期間外のリンクの無効化 */
-nav ul li a.disabled {
-  color: #999;               /* グレー文字 */
-  background: #ddd;          /* グレー背景（任意） */
-  cursor: not-allowed;       /* マウスを禁止マークに */
-  pointer-events: none;      /* クリックを無効化 */
-  text-decoration: none;     /* 下線を消したい場合 */
-}
 
 /* 本文位置（上書き） */
 main {
@@ -530,12 +522,29 @@ main {
   margin-top: 1em;
 }
 
-/* 有効期間外のボタン無効化 */
-.button.disabled {
-  background-color: #aaa;   /* グレー */
-  cursor: not-allowed;      /* カーソルを禁止マークに */
-  pointer-events: none;     /* クリックできない */
+
+/* ================================
+   有効期間外の無効化スタイル
+   ================================ */
+
+/* 年度ブロック内の準備中リンク */
+.event-link a.disabled {
+  color: #999;              /* グレー文字 */
+  background-color: #eee;   /* 薄いグレー背景 */
+  cursor: not-allowed;
+  pointer-events: none;
   text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 0.6em 1.2em;
+}
+
+/* ナビゲーションバー内の準備中リンク */
+.navbar a.disabled {
+  color: #999;              /* 文字をグレーに */
+  cursor: not-allowed;      /* カーソル禁止マーク */
+  pointer-events: none;     /* クリック無効化 */
+  background: transparent;  /* 背景はナビ色に合わせて透明 */
 }
 
 /* ================================
