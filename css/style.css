@@ -532,14 +532,14 @@ main {
   display: inline-block;
   background: #eee;           /* 薄いグレー背景 */
   color: #999;                /* グレー文字 */
-  padding: 0.8em 2em;         /* ボタンと同じ */
-  min-width: 200px;           /* ボタンと同じ */
-  text-align: center;
-  margin: 0.3em;              /* ボタンと同じ余白 */
+  padding: 0.8em 2em;         /* 有効ボタンと同じ余白 */
+  min-width: 200px;           /* 有効ボタンと同じ最低幅 */
+  text-align: center;         /* 中央寄せ */
+  margin: 0.3em;              /* 有効ボタンと同じ間隔 */
   border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
-  cursor: not-allowed;        /* カーソル禁止マーク */
+  cursor: not-allowed;        /* 禁止カーソル */
   pointer-events: none;       /* クリック無効化 */
 }
 
