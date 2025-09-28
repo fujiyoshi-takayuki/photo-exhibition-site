@@ -529,23 +529,28 @@ main {
 
 /* 年度ブロック内の準備中リンク */
 .event-link a.disabled {
-  color: #999;              /* グレー文字 */
-  background-color: #eee;   /* 薄いグレー背景 */
-  cursor: not-allowed;
-  pointer-events: none;
-  text-decoration: none;
-  border-radius: 6px;
   display: inline-block;
-  padding: 0.6em 1.2em;
+  background: #eee;           /* 薄いグレー背景 */
+  color: #999;                /* グレー文字 */
+  padding: 0.8em 2em;         /* ボタンと同じ */
+  min-width: 200px;           /* ボタンと同じ */
+  text-align: center;
+  margin: 0.3em;              /* ボタンと同じ余白 */
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: not-allowed;        /* カーソル禁止マーク */
+  pointer-events: none;       /* クリック無効化 */
 }
 
 /* ナビゲーションバー内の準備中リンク */
 .navbar a.disabled {
-  color: #999;              /* 文字をグレーに */
-  cursor: not-allowed;      /* カーソル禁止マーク */
-  pointer-events: none;     /* クリック無効化 */
-  background: transparent;  /* 背景はナビ色に合わせて透明 */
+  color: #999;                /* グレー文字 */
+  cursor: not-allowed;
+  pointer-events: none;
+  background: transparent;    /* 背景はナビと統一 */
 }
+
 
 /* ================================
    お知らせセクション
