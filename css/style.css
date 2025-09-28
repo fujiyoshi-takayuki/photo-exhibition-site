@@ -491,6 +491,15 @@ a.button:hover {
   background: #777;
 }
 
+/* 有効期間外のリンクの無効化 */
+nav ul li a.disabled {
+  color: #999;               /* グレー文字 */
+  background: #ddd;          /* グレー背景（任意） */
+  cursor: not-allowed;       /* マウスを禁止マークに */
+  pointer-events: none;      /* クリックを無効化 */
+  text-decoration: none;     /* 下線を消したい場合 */
+}
+
 /* 本文位置（上書き） */
 main {
   margin-top: 120px; /* ヘッダー＋ナビ分下げる */
@@ -519,6 +528,14 @@ main {
 .link-buttons {
   text-align: center;
   margin-top: 1em;
+}
+
+/* 有効期間外のボタン無効化 */
+.button.disabled {
+  background-color: #aaa;   /* グレー */
+  cursor: not-allowed;      /* カーソルを禁止マークに */
+  pointer-events: none;     /* クリックできない */
+  text-decoration: none;
 }
 
 /* ================================
