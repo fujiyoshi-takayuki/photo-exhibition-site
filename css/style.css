@@ -543,6 +543,14 @@ main {
   pointer-events: none;       /* クリック無効化 */
 }
 
+/* 準備中ボタン */
+.button.disabled {
+  background: #eee;        /* 薄いグレー */
+  color: #999;             /* グレー文字 */
+  cursor: not-allowed;     /* 禁止カーソル */
+  pointer-events: none;    /* クリック無効化 */
+}
+
 /* ナビゲーションバー内の準備中リンク */
 .navbar a.disabled {
   color: #999;                /* グレー文字 */
