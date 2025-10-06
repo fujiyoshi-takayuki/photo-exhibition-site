@@ -4,7 +4,7 @@
 const exhibitions = {
   "summer": {
     startDate: new Date("2025-09-10T00:00:00"),  // 公開開始
-    endDate: new Date("2025-09-21T23:59:59"),    // 投票締切
+    endDate: new Date("2025-10-14T23:59:59"),    // 投票締切
     worksPasswordURL: "works.html",              // パスワードページ
     worksPublicURL: "af69592862e159a7cf723a78c20a47ce109d13b04db75224503159b765b84967/index.html",         // 一般公開ページ（終了後）
     navSelector: 'a[href*="2025/summer"]'        // ナビゲーション識別用
