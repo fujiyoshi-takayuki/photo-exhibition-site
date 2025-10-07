@@ -8,9 +8,27 @@ title: "法政大学 小金井写真部 写真展サイト &#8211; Hosei Univers
   このサイトでは、法政大学
   小金井写真部の写真展（学祭・夏・冬）の作品を閲覧したり、投票したりできます。
 </p>
-<p>
-  <strong>最新：</strong> <a href="{{ "/2025/summer/" | relative_url }}">2025夏写真展はこちら</a>
-</p>
+{% assign latest_exhibition = nil %}
+{% assign latest_year = nil %}
+
+{% for year in site.data.exhibitions reversed %}
+  {% for season in year[1] %}
+    {% assign data = season[1] %}
+    {% if data.published %}
+      {% assign latest_exhibition = data %}
+      {% assign latest_year = year[0] %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if latest_exhibition %}
+  <p>
+    <strong>最新：</strong>
+    <a href="{{ latest_exhibition.url | relative_url }}">{{ latest_exhibition.title }}はこちら</a>
+  </p>
+{% else %}
+  <p><strong>最新：</strong> 現在公開中の写真展はありません。</p>
+{% endif %}
 
 <!-- お知らせセクション -->
 <div class="c-section p-layout-container">
