@@ -4,7 +4,7 @@
   summer:
     title: "2025夏写真展"
     url: "/2025/summer/"
-    published: true
+    published: false
   gakusai:
     title: "2025学祭写真展"
     url: "/2025/gakusai/"
