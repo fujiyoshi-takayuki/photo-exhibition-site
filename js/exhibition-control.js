@@ -40,6 +40,7 @@ if (exhibitionKey && exhibitions[exhibitionKey]) {
   // 投票ボタンと作品一覧リンクを取得
   const voteButton = document.querySelector(".vote-container .button");
   const worksLink = document.querySelector('.link-buttons a[href*="works"]');
+  const resultButton = document.querySelector(".result-container .button");
 
   // === 1️⃣ 投票開始前 ===
   if (now < startDate) {
@@ -53,6 +54,11 @@ if (exhibitionKey && exhibitions[exhibitionKey]) {
       worksLink.textContent = "作品一覧（準備中）";
       worksLink.classList.add("disabled");
       worksLink.removeAttribute("href");
+    }
+    if (resultButton) {
+    resultButton.textContent = "結果概要（まだ公開されていません）";
+    resultButton.classList.add("disabled");
+    resultButton.removeAttribute("href");
     }
 
   // === 2️⃣ 投票期間中 ===
@@ -68,6 +74,11 @@ if (exhibitionKey && exhibitions[exhibitionKey]) {
       worksLink.classList.remove("disabled");
       worksLink.textContent = "作品一覧";
     }
+    if (resultButton) {
+    resultButton.textContent = "結果概要（投票期間終了後に公開）";
+    resultButton.classList.add("disabled");
+    resultButton.removeAttribute("href");
+    }
 
   // === 3️⃣ 投票終了後 ===
   } else {
@@ -82,6 +93,11 @@ if (exhibitionKey && exhibitions[exhibitionKey]) {
       worksLink.setAttribute("href", worksPublicURL);
       worksLink.textContent = "作品一覧（一般公開中）";
       worksLink.classList.remove("disabled");
+    }
+    if (resultButton) {
+    resultButton.textContent = "結果概要を見る";
+    resultButton.classList.remove("disabled");
+    resultButton.setAttribute("href", "result.html");
     }
   }
 }
