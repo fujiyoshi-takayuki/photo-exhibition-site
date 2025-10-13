@@ -11,7 +11,7 @@ const exhibitions = {
     voteFormURL: "https://forms.gle/YJQeJJkgrZZoCbBs5" // 投票フォームURL
   },
   "gakusai": {
-    startDate: new Date("2025-11-01T00:00:00"),   // 公開開始 # 仮公開
+    startDate: new Date("2025-10-13T00:00:00"),   // 公開開始 # 仮公開
     endDate: new Date("2025-11-30T23:59:59"),     // 投票締切
     worksPasswordURL: "works.html",
     worksPublicURL: "2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/index.html",
