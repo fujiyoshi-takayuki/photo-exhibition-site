@@ -40,7 +40,7 @@ if (exhibitionKey && exhibitions[exhibitionKey]) {
   // 投票ボタンと作品一覧リンクを取得
   const voteButton = document.querySelector(".vote-container .button");
   const worksLink = document.querySelector('.link-buttons a[href*="works"]');
-  const resultButton = document.querySelector(".result-container .button");
+  const resultLink = document.querySelector('.link-buttons a[href*="result"]');
 
   // === 1️⃣ 投票開始前 ===
   if (now < startDate) {
