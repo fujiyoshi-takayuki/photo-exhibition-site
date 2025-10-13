@@ -2,7 +2,7 @@
 title: "2025学祭写真展のページを公開しました"
 date: 2025-10-13
 exhibition: "gakusai"
-published: false
+published: true
 ---
 
 ## 2025年度学祭写真展「燐光」の情報を解禁しました
