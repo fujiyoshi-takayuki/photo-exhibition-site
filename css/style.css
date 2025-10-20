@@ -169,6 +169,18 @@ footer .disclaimer {
 
 /* 　コンポーネント　 */
 
+/* ギャラリー全体 */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  ); /* 最小幅を狭める */
+  gap: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 /* --- ギャラリー全体 --- */
 .work-gallery {
   display: grid;
@@ -176,7 +188,7 @@ footer .disclaimer {
   gap: 1.5em;
   margin-top: 1em;
   padding: 0 1em;
-  align-items: stretch; /* 各カードを同じ高さに揃える */
+  align-items: stretch;
 }
 
 /* --- 各作品カード --- */
@@ -199,9 +211,11 @@ footer .disclaimer {
 /* --- 画像部分 --- */
 .work-card img {
   width: 100%;
-  height: 240px;           /* 高さ固定で統一 */
-  object-fit: cover;       /* 縦横比維持してトリミング */
-  flex-shrink: 0;
+  height: 380px;              /* カード高さを統一 */
+  object-fit: contain;        /* 縦横比を保って全体表示 */
+  object-position: center;    /* 中央寄せ配置 */
+  background: #f8f8f8;        /* 縦写真の余白部分を淡いグレーで */
+  border-bottom: 1px solid #eee;
 }
 
 /* --- 情報部分 --- */
@@ -209,23 +223,24 @@ footer .disclaimer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;        /* ← 中央寄せに変更 */
   padding: 0.8em 1em;
-  border-top: 1px solid #eee;
-  flex-grow: 1;            /* カードの残り高さを埋める */
+  text-align: center;         /* テキストも中央に */
 }
 
 /* --- 各情報行 --- */
 .work-number {
   font-weight: bold;
   color: #555;
-  margin: 0.2em 0;
+  margin: 0.3em 0 0.1em;
+  font-size: 1em;
 }
 
 .work-title {
   font-size: 1.15em;
   font-weight: bold;
   color: #222;
-  margin: 0.3em 0;
+  margin: 0.2em 0 0.4em;
 }
 
 .work-author {
@@ -246,8 +261,8 @@ footer .disclaimer {
   color: #444;
   line-height: 1.5;
   margin-top: auto;        /* 常に下に配置 */
-  min-height: 4em;         /* 最低高さを確保して揃える */
-  overflow: hidden;        /* 長文がはみ出さないように */
+  min-height: 4em;         /* 高さをある程度固定して整える */
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
