@@ -264,6 +264,8 @@ footer .disclaimer {
   min-height: 4em;         /* 高さをある程度固定して整える */
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: left;        /* ←★ 追加：左寄せ */
+  width: 100%;             /* ←★ 横幅いっぱいに */
 }
 
 /* DM画像のスタイル */
