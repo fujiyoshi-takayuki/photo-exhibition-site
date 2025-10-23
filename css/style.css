@@ -347,7 +347,7 @@ footer .disclaimer {
   position: relative;
   max-height: 6em;             /* 初期状態は約4〜5行分 */
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.5s ease, padding 0.3s ease;  /* ← なめらかに */
   text-align: left;
   white-space: pre-line;       /* 改行を反映 */
 }
