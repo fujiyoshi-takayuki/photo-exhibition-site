@@ -274,13 +274,13 @@ footer .disclaimer {
 
 /* --- Instagramアイコン --- */
 .insta-icon {
-  width: 1.4em;            /* ← 文字サイズとバランス良く */
-  height: 1.4em;
+  width: 1.2em;
+  height: 1.2em;
   margin-left: 0.35em;
-  vertical-align: middle;  /* テキストの高さに揃える */
+  vertical-align: middle;
   cursor: pointer;
-  filter: brightness(0) saturate(100%) invert(29%) sepia(74%) saturate(3566%) hue-rotate(314deg) brightness(96%) contrast(90%);
   transition: transform 0.2s, opacity 0.2s;
+  filter: none !important; /* ← ピンク化を完全に無効化 */
 }
 
 .insta-icon:hover {
