@@ -274,8 +274,8 @@ footer .disclaimer {
 
 /* --- Instagramアイコン --- */
 .insta-icon {
-  width: 1.2em;           /* 小型でテキストに自然に並ぶ */
-  height: 1.2em;
+  width: 1.4em;           /* 小型でテキストに自然に並ぶ */
+  height: 1.4em;
   margin-left: 0.3em;
   vertical-align: middle;
   fill: #000;             /* ← SVG本体の色を黒指定 */
