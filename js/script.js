@@ -102,3 +102,44 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const descBlocks = document.querySelectorAll(".work-info .work-description");
+
+  descBlocks.forEach(desc => {
+    // 直後の兄弟がボタンの想定
+    const btn = desc.nextElementSibling;
+    if (!btn || !btn.classList.contains("toggle-desc")) return;
+
+    // 一旦制限を外して本来の高さを測定
+    const originalMax = desc.style.maxHeight;
+    desc.style.maxHeight = "none";
+    const full = desc.scrollHeight; // 全文高さ
+    // 初期折りたたみ高さ（CSSの6em相当をpxにする簡易法）
+    // 固定 6em ではなく、実測に戻すため px を使う
+    const lineHeight = parseFloat(getComputedStyle(desc).lineHeight) || 18;
+    const collapsedPx = Math.round(lineHeight * 5); // だいたい5行ぶん
+    // 初期状態に戻す
+    desc.style.maxHeight = originalMax || `${collapsedPx}px`;
+
+    // 内容が短くて折りたたむ必要がなければボタンを隠す
+    if (full <= collapsedPx + 4) {
+      btn.style.display = "none";
+      return;
+    }
+
+    // クリックで開閉
+    btn.addEventListener("click", () => {
+      const isExpanded = desc.classList.toggle("expanded");
+      if (isExpanded) {
+        // 展開：実測値をセット
+        desc.style.maxHeight = full + "px";
+        btn.textContent = "閉じる";
+      } else {
+        // 折りたたみ：元の高さへ
+        desc.style.maxHeight = collapsedPx + "px";
+        btn.textContent = "もっと見る";
+      }
+    });
+  });
+});

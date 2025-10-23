@@ -790,3 +790,42 @@ body.password-page #password {
     margin: 0;
   }
 }
+
+/* === 折りたたみ説明：確実に広がる上書き === */
+
+/* カードは高さ固定しない（広がり阻害の予防） */
+.work-card { height: auto; }
+
+/* 初期は4〜5行で折りたたみ */
+.work-info .work-description {
+  position: relative;
+  max-height: 6em;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  text-align: left;
+  white-space: pre-line;
+}
+
+/* 展開時：インラインstyle優先に任せるが、保険で important */
+.work-info .work-description.expanded {
+  max-height: none !important;
+}
+
+/* もっと見る/閉じるボタン（右寄せ） */
+.work-info .toggle-desc {
+  display: inline-block;
+  margin-top: 0.5em;
+  margin-left: auto;
+  background-color: darkblue;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3em 0.8em;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.work-info .toggle-desc:hover {
+  background-color: navy;
+}
