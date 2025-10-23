@@ -74,3 +74,31 @@ document.addEventListener("DOMContentLoaded", function() {
     if (e.target === overlay) overlay.style.display = "none";
   });
 });
+
+/* 説明文の「もっと見る」機能 */
+
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButtons = document.querySelectorAll(".toggle-desc");
+
+  toggleButtons.forEach(button => {
+    const desc = button.previousElementSibling;
+
+    // --- 初期チェック: 説明文が短い場合はボタンを非表示 ---
+    const originalMaxHeight = getComputedStyle(desc).maxHeight;
+    desc.style.maxHeight = "none";
+    const fullHeight = desc.scrollHeight;
+    desc.style.maxHeight = originalMaxHeight;
+
+    // 表示領域より短い場合はボタンを非表示
+    if (fullHeight <= desc.clientHeight + 5) {
+      button.style.display = "none";
+      return;
+    }
+
+    // --- 通常の展開/閉じる動作 ---
+    button.addEventListener("click", () => {
+      desc.classList.toggle("expanded");
+      button.textContent = desc.classList.contains("expanded") ? "閉じる" : "もっと見る";
+    });
+  });
+});

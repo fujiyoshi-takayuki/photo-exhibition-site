@@ -270,6 +270,7 @@ footer .disclaimer {
   margin-top: auto;
   min-height: 4em;      /* 高さを揃える */
   overflow: hidden;
+  white-space: pre-line; /* ←★ 改行Enter */
 }
 
 /* --- Instagramアイコン --- */
@@ -339,6 +340,40 @@ footer .disclaimer {
 .popup-buttons .cancel {
   background-color: #ccc;
   color: #333;
+}
+
+/* --- 折りたたみ式ディスクリプション --- */
+.work-description {
+  position: relative;
+  max-height: 6em;              /* 初期状態では約4〜5行分 */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  text-align: left;
+}
+
+/* 展開時 */
+.work-description.expanded {
+  max-height: 999px;           /* 十分大きくして全文を見せる */
+}
+
+/* 「もっと見る」ボタン（右下配置） */
+.toggle-desc {
+  display: block;
+  margin-top: 0.5em;
+  margin-left: auto;            /* ← 右寄せ */
+  background-color: darkblue;   /* サイト全体に合わせた色味 */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3em 0.8em;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-desc:hover {
+  background-color: navy;
 }
 
 /* DM画像のスタイル */
