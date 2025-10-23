@@ -274,16 +274,17 @@ footer .disclaimer {
 
 /* --- Instagramアイコン --- */
 .insta-icon {
-  font-size: 1em;
+  width: 1.2em;
+  height: 1.2em;
   margin-left: 0.4em;
+  vertical-align: middle;
   cursor: pointer;
-  color: #c13584; /* Instagramピンク */
   transition: transform 0.2s, opacity 0.2s;
-  display: inline-block;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.1));
 }
 
 .insta-icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
   opacity: 0.8;
 }
 
