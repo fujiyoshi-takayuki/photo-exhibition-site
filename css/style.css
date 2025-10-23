@@ -274,7 +274,7 @@ footer .disclaimer {
 
 /* --- Instagramアイコン --- */
 .insta-icon {
-  width: 1.2em;
+  width: 1.2em;          /* テキストサイズに対して相対的 */
   height: 1.2em;
   margin-left: 0.4em;
   vertical-align: middle;
