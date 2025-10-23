@@ -27,3 +27,50 @@ window.addEventListener("scroll", () => {
 
   lastScrollY = scrollTop;
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const instaIcons = document.querySelectorAll(".insta-icon");
+  if (!instaIcons.length) return;
+
+  // ポップアップ生成
+  const overlay = document.createElement("div");
+  overlay.className = "popup-overlay";
+  overlay.innerHTML = `
+    <div class="popup-content">
+      <p>Instagramアカウントを表示しますか？</p>
+      <div class="popup-buttons">
+        <button class="confirm">表示する</button>
+        <button class="cancel">閉じる</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  const confirmBtn = overlay.querySelector(".confirm");
+  const cancelBtn = overlay.querySelector(".cancel");
+  let currentURL = null;
+
+  instaIcons.forEach(icon => {
+    const parent = icon.closest(".work-author");
+    const url = parent.dataset.instagram;
+    if (!url) return;
+
+    icon.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentURL = url;
+      overlay.style.display = "flex";
+    });
+  });
+
+  // 「表示する」クリックで新タブ
+  confirmBtn.addEventListener("click", () => {
+    if (currentURL) window.open(currentURL, "_blank");
+    overlay.style.display = "none";
+  });
+
+  // 「閉じる」または背景クリックで閉じる
+  cancelBtn.addEventListener("click", () => overlay.style.display = "none");
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) overlay.style.display = "none";
+  });
+});
