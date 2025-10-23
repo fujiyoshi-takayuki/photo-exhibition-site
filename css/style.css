@@ -345,23 +345,24 @@ footer .disclaimer {
 /* --- 折りたたみ式ディスクリプション --- */
 .work-description {
   position: relative;
-  max-height: 6em;              /* 初期状態では約4〜5行分 */
+  max-height: 6em;             /* 初期状態は約4〜5行分 */
   overflow: hidden;
   transition: max-height 0.3s ease;
   text-align: left;
+  white-space: pre-line;       /* 改行を反映 */
 }
 
-/* 展開時 */
+/* 展開時：高さ制限を解除して全文表示 */
 .work-description.expanded {
-  max-height: 999px;           /* 十分大きくして全文を見せる */
+  max-height: none;            /* ← ★ ここが重要！ */
 }
 
 /* 「もっと見る」ボタン（右下配置） */
 .toggle-desc {
   display: block;
   margin-top: 0.5em;
-  margin-left: auto;            /* ← 右寄せ */
-  background-color: darkblue;   /* サイト全体に合わせた色味 */
+  margin-left: auto;           /* 右寄せ */
+  background-color: darkblue;  /* サイト全体に合わせた色味 */
   color: #fff;
   border: none;
   border-radius: 6px;
