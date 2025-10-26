@@ -1,6 +1,6 @@
 ---
 title: "掲載作品の著作権について"
-date: 2025-10-27
+date: 2025-10-26
 published: true
 ---
 
