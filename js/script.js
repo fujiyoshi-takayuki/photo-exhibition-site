@@ -123,10 +123,29 @@ document.addEventListener("contextmenu", e => e.preventDefault());
 document.addEventListener("dragstart", e => e.preventDefault());
 document.addEventListener("selectstart", e => e.preventDefault());
 
-// スマホ長押し防止
-document.addEventListener("touchstart", e => {
-  if (e.target.closest(".photo-wrapper")) e.preventDefault();
-}, { passive: false });
+// スマホ長押し防止（ただしタップ動作は許可）
+document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("dragstart", e => e.preventDefault());
+document.addEventListener("selectstart", e => e.preventDefault());
+
+// iPhone Safari対応：タップも確実にLightbox起動
+document.querySelectorAll(".photo-overlay").forEach(layer => {
+  layer.addEventListener("touchstart", e => {
+    e.stopPropagation(); // タップ波及を防ぐ
+  }, { passive: true });
+
+  layer.addEventListener("click", e => {
+    const wrapper = e.target.closest(".photo-wrapper");
+    if (!wrapper) return;
+    const url = wrapper.dataset.full;
+    if (!url) return;
+    const lightbox = document.querySelector(".lightbox");
+    const img = lightbox.querySelector("img");
+    img.src = url;
+    img.style.transform = "scale(1)";
+    lightbox.classList.add("active");
+  });
+});
 
 // Lightbox生成
 document.addEventListener("DOMContentLoaded", () => {
