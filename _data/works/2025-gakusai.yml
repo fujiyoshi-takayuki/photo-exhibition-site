@@ -24,7 +24,7 @@
   description: |
     あけぼの山農業公園にて撮影。
 
-- no: 2
+- "no": 2
   title: 残光
   author: Takakichi
   instagram: "" # 空ならアイコンを出さない
@@ -49,7 +49,7 @@
     いま、写真の中でだけ彼は生き続けている。
     光の中に残ったその存在を「残光」と名づけた。
 
-- no: 3
+- "no": 3
   title: 無題
   author: Sase Minami
   instagram: ""
@@ -71,7 +71,7 @@
   description: |
     （作品説明未記入）
 
-- no: 4
+- "no": 4
   title: 黄昏の刻
   author: Sase Minami
   instagram: ""
@@ -93,7 +93,7 @@
   description: |
     （作品説明未記入）
 
-- no: 5
+- "no": 5
   title: 夕映えの刻
   author: Sase Minami
   instagram: ""
@@ -115,7 +115,7 @@
   description: |
     （作品説明未記入）
 
-- no: 6
+- "no": 6
   title: 夕映えの刻
   author: Sase Minami
   instagram: ""
@@ -137,7 +137,7 @@
   description: |
     （作品説明未記入）
 
-- no: 7
+- "no": 7
   title: 夕映えの刻
   author: Sase Minami
   instagram: ""
@@ -159,7 +159,7 @@
   description: |
     （作品説明未記入）
 
-- no: 8
+- "no": 8
   title: 夕映えの刻
   author: Sase Minami
   instagram: ""
@@ -181,7 +181,7 @@
   description: |
     （作品説明未記入）
 
-- no: 9
+- "no": 9
   title: 光の航路
   author: Takakichi
   instagram: ""
