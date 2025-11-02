@@ -8,7 +8,7 @@ title: 2025年度 学祭写真展 「燐光」 作品一覧
 
 <!-- ギャラリー -->
 <div class="work-gallery">
-  {% assign works = site.data.works["2025-gakusai"] | sort: "no" %}
+  {% assign works = site.data.works["2025-gakusai"] | default: site.data.works["2025_gakusai"] | sort: "no" %}
   {% for w in works %}
   <div class="work-card">
     <!-- 画像：保存抑止 + Lightbox 用 -->
