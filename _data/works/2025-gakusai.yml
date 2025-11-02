@@ -1,0 +1,75 @@
+# 2025 学祭写真展「燐光」 データテンプレート
+# 必須: no, title, author, images.thumb, images.full
+# 任意: instagram, camera, lens, location, shot_date, settings, ai_processing, description
+
+- no: 1
+  title: 夕華
+  author: Betty
+  instagram: "https://www.instagram.com/yib_photo/"
+  camera: "OM-D E-M10 Mark IV"
+  lens: ""                  # 例: M.ZUIKO 25mm F1.8
+  location: "あけぼの山農業公園"
+  shot_date: ""             # 例: 2025-09-15
+  settings:
+    aperture: "f/5.6"            # 例: f/2.8
+    shutter: "1/320"             # 例: 1/500
+    iso: ""                 # 例: ISO 200
+    wb: ""                  # 例: 太陽光
+  ai_processing:
+    used: false             # true/false
+    note: ""                # 例: 「被写体以外の領域でノイズ低減を実施」
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai01_s.jpeg"
+    full:  "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai01_s.jpeg"
+  description: |
+    あけぼの山農業公園にて撮影。
+
+- no: 2
+  title: 残光
+  author: Takakichi
+  instagram: ""             # 空ならアイコンを出さない
+  camera: "PENTAX K-70"
+  lens: "HD PENTAX-DA 55-300mm F4.5-6.3 ED PLM WR RE"
+  location: "多摩動物公園(東京都)"
+  shot_date: "2024-03-19"
+  settings:
+    aperture: "f/8.0"
+    shutter: "1/1000"
+    iso: "ISO 800"
+    wb: "太陽光"
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai02_s.jpg"
+    full:  "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai02_s.jpg"
+  description: |
+    動物園のケージ越しに見つめ返してきたクマタカ。
+    撮影から一年後、その個体は亡くなったと知った。
+    いま、写真の中でだけ彼は生き続けている。
+    光の中に残ったその存在を「残光」と名づけた。
+
+- no: 9
+  title: 光の航路
+  author: Takakichi
+  instagram: ""
+  camera: "PENTAX K-70"
+  lens: ""
+  location: "恵比寿ガーデンプレイス（東京都）"
+  shot_date: "2024-12-15"
+  settings:
+    aperture: "f/9.5"
+    shutter: "1/1000"
+    iso: "ISO 16000"
+    wb: "CTE"
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai09_s.jpg"
+    full:  "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai09_s.jpg"
+  description: |
+    昨年の全体撮影会にて撮影。
+    夕陽の光を受けながら、空へと航路を描く機体。
+    一瞬だけ訪れる、金と藍の境界の時間。
+    光に包まれたその姿は、日常の中にある“奇跡の一瞬”を映し出している。

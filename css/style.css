@@ -881,27 +881,25 @@ body.password-page #password {
   }
 }
 
-/* === 折りたたみ説明：確実に広がる上書き === */
+/* ===============================
+   作品カード：説明折りたたみ（なめらか版）
+   =============================== */
 
-/* カードは高さ固定しない（広がり阻害の予防） */
-.work-card { height: auto; }
-
-/* 初期は4〜5行で折りたたみ */
+/* 初期表示は約4〜5行 */
 .work-info .work-description {
   position: relative;
   max-height: 6em;
   overflow: hidden;
-  transition: max-height 0.3s ease;
   text-align: left;
-  white-space: pre-line;
+  white-space: pre-line; /* YAMLの | による改行も綺麗に反映 */
+  transition: max-height 0.5s ease-in-out;
+  will-change: max-height;
 }
 
-/* 展開時：インラインstyle優先に任せるが、保険で important */
-.work-info .work-description.expanded {
-  max-height: none !important;
-}
+/* 展開時は max-height をJSで px 指定にするため、CSS側では何もしない
+   （max-height:none; は“アニメ不可”なので入れない） */
 
-/* もっと見る/閉じるボタン（右寄せ） */
+/* ボタン */
 .work-info .toggle-desc {
   display: inline-block;
   margin-top: 0.5em;
@@ -914,8 +912,68 @@ body.password-page #password {
   font-size: 0.9em;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
 }
-.work-info .toggle-desc:hover {
-  background-color: navy;
+.work-info .toggle-desc:hover { background-color: navy; }
+
+/* カードは高さ固定しない（押し下げ展開を阻害しない） */
+.work-card { height: auto; }
+
+/* ===============================
+   画像：保存抑止 + Lightbox + ピンチズーム
+   =============================== */
+
+.photo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  cursor: zoom-in;
+  border-radius: 8px;
 }
+.photo {
+  width: 100%; height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  user-select: none;
+  pointer-events: none; /* 実体はクリックさせず透明レイヤに集約 */
+}
+/* 透明クリックレイヤー */
+.photo-overlay {
+  position: absolute; inset: 0;
+  background: transparent;
+  z-index: 10;
+}
+/* 透かし */
+.photo-wrapper::after {
+  content: "© 法政大学 小金井写真部";
+  position: absolute; right: 8px; bottom: 8px;
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.75);
+  background: rgba(0,0,0,0.3);
+  padding: 3px 6px;
+  border-radius: 4px;
+  z-index: 11;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 2000;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.lightbox.active { opacity: 1; pointer-events: auto; }
+.lightbox img {
+  max-width: 90%; max-height: 90%;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  user-select: none;
+  touch-action: none; /* ピンチズームをJSで制御 */
+}
+.lightbox.active { cursor: zoom-out; }

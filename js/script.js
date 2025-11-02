@@ -1,3 +1,6 @@
+/***********************
+ * ヘッダー/ナビの出し入れ
+ ***********************/
 let lastScrollY = window.scrollY;
 const header = document.getElementById("main-header");
 const navbar = document.querySelector(".navbar");
@@ -20,13 +23,13 @@ window.addEventListener("scroll", () => {
     header.style.top = "0";
     navbar.style.top = "70px";
   }
-
   lastScrollY = scrollTop;
 });
 
-// ================================
-// Instagram ポップアップ機能
-// ================================
+
+/***********************
+ * Instagram ポップアップ
+ ***********************/
 document.addEventListener("DOMContentLoaded", function() {
   const instaIcons = document.querySelectorAll(".insta-icon");
   if (!instaIcons.length) return;
@@ -50,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   instaIcons.forEach(icon => {
     const parent = icon.closest(".work-author");
-    const url = parent.dataset.instagram;
+    const url = parent?.dataset.instagram;
     if (!url) return;
 
     icon.addEventListener("click", (e) => {
@@ -64,108 +67,116 @@ document.addEventListener("DOMContentLoaded", function() {
     if (currentURL) window.open(currentURL, "_blank");
     overlay.style.display = "none";
   });
-
   cancelBtn.addEventListener("click", () => overlay.style.display = "none");
   overlay.addEventListener("click", e => {
     if (e.target === overlay) overlay.style.display = "none";
   });
 });
 
-// ================================
-// 「もっと見る」ボタン機能（完全版）
-// ================================
-window.addEventListener("load", function() {
+
+/***********************************
+ * 「もっと見る」折りたたみ（滑らかアニメ版）
+ ***********************************/
+function setupCollapsibles() {
   const descriptions = document.querySelectorAll(".work-description");
 
   descriptions.forEach(desc => {
     const button = desc.nextElementSibling;
     if (!button || !button.classList.contains("toggle-desc")) return;
 
-    const fullHeight = desc.scrollHeight;
-    const lineHeight = parseFloat(getComputedStyle(desc).lineHeight) || 18;
-    const collapsedHeight = Math.round(lineHeight * 5);
+    // 空テキストの場合はボタン非表示
+    const plain = desc.textContent.replace(/\s+/g, "");
+    if (!plain) { button.style.display = "none"; return; }
 
-    // --- 高さ判定を少し緩めにする ---
-    if (fullHeight <= collapsedHeight * 1.05) { // ← 判定を約5%ゆるく
-      // ただし、文字数が短すぎる場合は非表示
-      const textLength = desc.textContent.trim().length;
-      if (textLength < 60) { // 60文字未満は短文扱い
-        button.style.display = "none";
-        return;
-      }
+    // 5行分の高さを算出
+    const lineHeight = parseFloat(getComputedStyle(desc).lineHeight) || 18;
+    const collapsed = Math.round(lineHeight * 5);
+
+    // いったん自動サイズにして全文高さ測定
+    const prevMax = desc.style.maxHeight;
+    desc.style.maxHeight = "none";
+    const full = desc.scrollHeight;
+    // 初期は折りたたみサイズに戻す
+    desc.style.maxHeight = collapsed + "px";
+    desc.style.overflow = "hidden";
+
+    // 短文ならボタン不要
+    if (full <= collapsed + 2) {
+      button.style.display = "none";
+      return;
     }
 
-    // 初期状態
-    desc.style.maxHeight = collapsedHeight + "px";
-    desc.style.overflow = "hidden";
-    desc.dataset.fullHeight = fullHeight;
-    desc.dataset.collapsedHeight = collapsedHeight;
+    let animating = false;
 
-    button.addEventListener("click", () => {
-      const isExpanded = desc.classList.toggle("expanded");
-      if (isExpanded) {
-        desc.style.maxHeight = desc.dataset.fullHeight + "px";
+    const expand = () => {
+      if (animating) return;
+      animating = true;
+      // 一度autoにして実寸取得 → px指定してアニメ
+      desc.style.maxHeight = "none";
+      const target = desc.scrollHeight;
+      desc.style.maxHeight = collapsed + "px";
+      requestAnimationFrame(() => {
+        desc.style.maxHeight = target + "px";
         button.textContent = "閉じる";
-      } else {
-        desc.style.maxHeight = desc.dataset.collapsedHeight + "px";
+      });
+      // アニメ終了後に auto に戻すと折返しにも強い
+      setTimeout(() => {
+        desc.style.maxHeight = "none";
+        animating = false;
+      }, 550);
+    };
+
+    const collapse = () => {
+      if (animating) return;
+      animating = true;
+      // 現在の実寸をpxで固定してから縮める
+      desc.style.maxHeight = desc.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        desc.style.maxHeight = collapsed + "px";
         button.textContent = "もっと見る";
-      }
+      });
+      setTimeout(() => { animating = false; }, 550);
+    };
+
+    let expanded = false;
+    button.addEventListener("click", () => {
+      expanded ? collapse() : expand();
+      expanded = !expanded;
     });
   });
-});
+}
 
-// ================================
-// 保存防止＋Lightbox＋ピンチズーム対応
-// ================================
+window.addEventListener("load", setupCollapsibles);
 
-// 保存操作防止
+
+/***********************************
+ * 画像：保存抑止 + Lightbox + ピンチズーム
+ ***********************************/
+
+// 右クリック・ドラッグ・選択の基本抑止（ページ全体）
 document.addEventListener("contextmenu", e => e.preventDefault());
 document.addEventListener("dragstart", e => e.preventDefault());
 document.addEventListener("selectstart", e => e.preventDefault());
 
-// スマホ長押し防止（ただしタップ動作は許可）
-document.addEventListener("contextmenu", e => e.preventDefault());
-document.addEventListener("dragstart", e => e.preventDefault());
-document.addEventListener("selectstart", e => e.preventDefault());
-
-// iPhone Safari対応：タップも確実にLightbox起動
-document.querySelectorAll(".photo-overlay").forEach(layer => {
-  layer.addEventListener("touchstart", e => {
-    e.stopPropagation(); // タップ波及を防ぐ
-  }, { passive: true });
-
-  layer.addEventListener("click", e => {
-    const wrapper = e.target.closest(".photo-wrapper");
-    if (!wrapper) return;
-    const url = wrapper.dataset.full;
-    if (!url) return;
-    const lightbox = document.querySelector(".lightbox");
-    const img = lightbox.querySelector("img");
-    img.src = url;
-    img.style.transform = "scale(1)";
-    lightbox.classList.add("active");
-  });
-});
-
-// Lightbox生成
+// Lightbox生成（1回）
 document.addEventListener("DOMContentLoaded", () => {
-  const wrappers = document.querySelectorAll(".photo-wrapper");
   const lightbox = document.createElement("div");
   lightbox.className = "lightbox";
   const img = document.createElement("img");
   lightbox.appendChild(img);
   document.body.appendChild(lightbox);
 
-  // 通常クリックでLightbox開く
-  wrappers.forEach(wrapper => {
-    wrapper.addEventListener("click", () => {
+  // 開く（PCクリック/スマホタップどちらもOK）
+  document.querySelectorAll(".photo-wrapper").forEach(wrapper => {
+    const open = () => {
       const url = wrapper.dataset.full;
       if (!url) return;
       img.src = url;
       img.style.transform = "scale(1)";
-      img.dataset.scale = "1";
       lightbox.classList.add("active");
-    });
+    };
+    wrapper.addEventListener("click", open);
+    wrapper.addEventListener("touchend", open, { passive: true });
   });
 
   // 背景クリックで閉じる
@@ -173,9 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === lightbox) lightbox.classList.remove("active");
   });
 
-  // ======================
-  // ピンチズーム対応処理
-  // ======================
+  // ピンチズーム（1〜3倍）
   let initialDistance = 0;
   let currentScale = 1;
 
@@ -183,10 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.touches.length === 2) {
       e.preventDefault();
       const [t1, t2] = e.touches;
-      initialDistance = Math.hypot(
-        t2.clientX - t1.clientX,
-        t2.clientY - t1.clientY
-      );
+      initialDistance = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
     }
   }, { passive: false });
 
@@ -194,20 +200,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.touches.length === 2 && initialDistance > 0) {
       e.preventDefault();
       const [t1, t2] = e.touches;
-      const newDistance = Math.hypot(
-        t2.clientX - t1.clientX,
-        t2.clientY - t1.clientY
-      );
-      const scale = Math.min(Math.max(newDistance / initialDistance, 1), 3); // 1〜3倍
+      const newDistance = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+      const scale = Math.min(Math.max(newDistance / initialDistance, 1), 3);
       currentScale = scale;
       img.style.transform = `scale(${scale})`;
     }
   }, { passive: false });
 
-  lightbox.addEventListener("touchend", e => {
-    if (e.touches.length < 2) {
-      initialDistance = 0;
-      if (currentScale < 1.05) img.style.transform = "scale(1)";
-    }
+  lightbox.addEventListener("touchend", () => {
+    if (currentScale < 1.05) img.style.transform = "scale(1)";
+    initialDistance = 0;
   });
 });
