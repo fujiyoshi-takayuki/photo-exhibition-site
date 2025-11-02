@@ -69,19 +69,19 @@
     thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai03_s.jpg"
     full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai03_s.jpg"
   description: |
-    （作品説明未記入）
+    
 
 - "no": 4
-  title: 黄昏の刻
-  author: Sase Minami
-  instagram: ""
-  camera: "Canon EOS Kiss X9"
+  title: 海焔
+  author: Betty
+  instagram: "https://www.instagram.com/yib_photo/"
+  camera: "OM-D E-M10 Mark IV"
   lens: ""
-  location:
+  location: 城ヶ島（神奈川県）
   shot_date:
   settings:
-    aperture: ""
-    shutter: ""
+    aperture: "f/5.8"
+    shutter: "1/250"
     iso: ""
     wb: ""
   ai_processing:
@@ -91,13 +91,13 @@
     thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai04_s.jpg"
     full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai04_s.jpg"
   description: |
-    （作品説明未記入）
+    水飛沫が夕陽に照らされて、まるで火花が散っているように見えた。連写していなかったことを少し後悔している。
 
 - "no": 5
-  title: 夕映えの刻
-  author: Sase Minami
+  title: 彩風
+  author: Lisa Maruyama
   instagram: ""
-  camera: "Canon EOS Kiss X9"
+  camera: "Canon EOS 5D Mark III"
   lens: ""
   location:
   shot_date:
@@ -113,19 +113,19 @@
     thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai05_s.jpg"
     full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai05_s.jpg"
   description: |
-    （作品説明未記入）
+    
 
 - "no": 6
-  title: 夕映えの刻
-  author: Sase Minami
+  title: 遥
+  author: Irin OH
   instagram: ""
-  camera: "Canon EOS Kiss X9"
+  camera: "Sony α7 III"
   lens: ""
-  location:
+  location: 江ノ島（神奈川県）
   shot_date:
   settings:
-    aperture: ""
-    shutter: ""
+    aperture: "f/6.3"
+    shutter: "1/6400"
     iso: ""
     wb: ""
   ai_processing:
@@ -135,19 +135,19 @@
     thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai06_s.jpg"
     full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai06_s.jpg"
   description: |
-    （作品説明未記入）
+    江ノ島にて撮影。
 
 - "no": 7
-  title: 夕映えの刻
-  author: Sase Minami
+  title: 雪
+  author: 趙 紫安
   instagram: ""
-  camera: "Canon EOS Kiss X9"
-  lens: ""
+  camera: "Apple iPhone 16 Pro Max"
+  lens: "超広角カメラ - 13mm f2.4"
   location:
   shot_date:
   settings:
-    aperture: ""
-    shutter: ""
+    aperture: "f/2.4"
+    shutter: "1/1312"
     iso: ""
     wb: ""
   ai_processing:
@@ -160,16 +160,16 @@
     （作品説明未記入）
 
 - "no": 8
-  title: 夕映えの刻
-  author: Sase Minami
+  title: Evolve of TSUBASA
+  author: Si_13tk
   instagram: ""
-  camera: "Canon EOS Kiss X9"
-  lens: ""
+  camera: "Apple iPhone 12 Pro"
+  lens: "望遠カメラ - 52mm f2.0"
   location:
   shot_date:
   settings:
-    aperture: ""
-    shutter: ""
+    aperture: "f/2.0"
+    shutter: "1/99"
     iso: ""
     wb: ""
   ai_processing:
@@ -179,7 +179,7 @@
     thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai08_s.jpg"
     full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai08_s.jpg"
   description: |
-    （作品説明未記入）
+    
 
 - "no": 9
   title: 光の航路
