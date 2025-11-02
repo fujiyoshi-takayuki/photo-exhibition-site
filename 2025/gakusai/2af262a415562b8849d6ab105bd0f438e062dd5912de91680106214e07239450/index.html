@@ -19,11 +19,8 @@ title: 2025年度 学祭写真展 「燐光」 作品一覧
 
     <div class="work-info">
       <p class="work-number">
-        {% if w.no < 10 %}
-          No.0{{ w.no }}
-        {% else %}
-          No.{{ w.no }}
-        {% endif %}
+        {% assign num = w.no %}
+          No.{% if num and num < 10 %}0{% endif %}{{ num }}
       </p>
       <p class="work-title">{{ w.title }}</p>
 
