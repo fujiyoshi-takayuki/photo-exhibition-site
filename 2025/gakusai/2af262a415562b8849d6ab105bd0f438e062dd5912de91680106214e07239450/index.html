@@ -18,7 +18,13 @@ title: 2025年度 学祭写真展 「燐光」 作品一覧
     </div>
 
     <div class="work-info">
-      <p class="work-number"><strong>No.{{ "%02d" | format: w.no }}</strong></p>
+      <p class="work-number">
+        {% if w.no < 10 %}
+          No.0{{ w.no }}
+        {% else %}
+          No.{{ w.no }}
+        {% endif %}
+      </p>
       <p class="work-title">{{ w.title }}</p>
 
       <p class="work-author"{% if w.instagram %} data-instagram="{{ w.instagram }}"{% endif %}>
