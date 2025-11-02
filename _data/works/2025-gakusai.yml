@@ -30,7 +30,7 @@
   instagram: "" # 空ならアイコンを出さない
   camera: "PENTAX K-70"
   lens: "HD PENTAX-DA 55-300mm F4.5-6.3 ED PLM WR RE"
-  location: "多摩動物公園(東京都)"
+  location: "多摩動物公園（東京都）"
   shot_date: "2024-03-19"
   settings:
     aperture: "f/8.0"
@@ -110,8 +110,8 @@
     used: false
     note: ""
   images:
-    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai05_s.jpg"
-    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai05_s.jpg"
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai05_s.jpeg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai05_s.jpeg"
   description: |
     
 
@@ -132,8 +132,8 @@
     used: false
     note: ""
   images:
-    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai06_s.jpg"
-    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai06_s.jpg"
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai06_s.jpeg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai06_s.jpeg"
   description: |
     江ノ島にて撮影。
 
@@ -157,7 +157,7 @@
     thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai07_s.jpg"
     full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai07_s.jpg"
   description: |
-    （作品説明未記入）
+    
 
 - "no": 8
   title: Evolve of TSUBASA
@@ -176,8 +176,8 @@
     used: false
     note: ""
   images:
-    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai08_s.jpg"
-    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai08_s.jpg"
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai08_s.jpeg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai08_s.jpeg"
   description: |
     
 
@@ -205,3 +205,290 @@
     夕陽の光を受けながら、空へと航路を描く機体。
     一瞬だけ訪れる、金と藍の境界の時間。
     光に包まれたその姿は、日常の中にある“奇跡の一瞬”を映し出している。
+
+- "no": 10
+  title: 納得できない怒られ方
+  author: Koji Sakaguchi
+  instagram: ""
+  camera: "Sony ZV-E10 Mark II"
+  lens: ""
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: "f/5.6"
+    shutter: "1/1250"
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai10_s.JPG"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai10_s.JPG"
+  description: |
+    
+
+- "no": 11
+  title: 海の向こうに
+  author: Lisa Maruyama
+  instagram: ""
+  camera: "Nikon Z50"
+  lens: ""
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: "f/6.3"
+    shutter: "1/1000"
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai11_s.jpeg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai11_s.jpeg"
+  description: |
+    
+
+- "no": 12
+  title: 里装ふ
+  author: Akira Suga
+  instagram: ""
+  camera: "Nikon Z70"
+  lens: "NIKKOR Z 70-200mm F2.8 VR S"
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: "f/4.5"
+    shutter: "1/2000"
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai12_s.jpg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai12_s.jpg"
+  description: |
+    
+
+- "no": 13
+  title: 孤高
+  author: asa
+  instagram: "https://www.instagram.com/asato_fever_photo/"
+  camera: "Nikon D3300"
+  lens: ""
+  location: "旭山動物園（北海道）"
+  shot_date: ""
+  settings:
+    aperture: "f/3.5"
+    shutter: "1/1600"
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai13_s.jpg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai13_s.jpg"
+  description: |
+    北海道旭川市　旭山動物園にて撮影。
+    オオカミを見たくて旭山動物園へ。初めはただの犬のようでしたが、時より見せる凛々しい姿に感動。
+
+- "no": 14
+  title: 水の惑星
+  author: 飯田智久
+  instagram: ""
+  camera: "Sony α7R III"
+  lens: ""
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: "f/1.8"
+    shutter: "15s"
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai14_s.jpg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai14_s.jpg"
+  description: |
+    
+
+- "no": 15
+  title: 榛名秋寒
+  author: Akira Suga
+  instagram: ""
+  camera: "Nikon Z6"
+  lens: "NIKKOR Z 20mm F1.8 S"
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: "f/1.8"
+    shutter: "1/1250"
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai15_s.jpg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai15_s.jpg"
+  description: |
+    
+
+- "no": 16
+  title: 空虚
+  author: Yuka Kobayashi
+  instagram: ""
+  camera: "SIGMA fp"
+  lens: ""
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: ""
+    shutter: ""
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai16_s.jpg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai16_s.jpg"
+  description: |
+    
+
+- "no": 17
+  title: 木霊の舞
+  author: 飯田智久
+  instagram: ""
+  camera: "MINOLTA CLE"
+  lens: ""
+  location: "赤城山覚満淵（群馬県）"
+  shot_date: "2023-08-15"
+  settings:
+    aperture: ""
+    shutter: ""
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai17_s.jpeg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai17_s.jpeg"
+  description: |
+    
+
+- "no": 18
+  title: 風の通り道
+  author: Koki Obi
+  instagram: ""
+  camera: ""
+  lens: ""
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: ""
+    shutter: ""
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai18_s.jpg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai18_s.jpg"
+  description: |
+    
+
+- "no": 19
+  title: 夕焼け
+  author: 趙 紫安
+  instagram: ""
+  camera: "Apple iPhone 16 Pro Max"
+  lens: ""
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: ""
+    shutter: ""
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai19_s.jpg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai19_s.jpg"
+  description: |
+    
+
+- "no": 20
+  title: 調和する水殿と
+  author: Si_13tk
+  instagram: ""
+  camera: "Canon EOS R50"
+  lens: ""
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: "f/5.6"
+    shutter: "1/60"
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai20_s.jpeg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai20_s.jpeg"
+  description: |
+    
+
+- "no": 21
+  title: voyager
+  author: Koki Obi
+  instagram: ""
+  camera: "Canon EOS 6D Mark II"
+  lens: ""
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: "f/4.0"
+    shutter: "1/60"
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai21_s.jpg"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai21_s.jpg"
+  description: |
+    
+
+- "no": 22
+  title: 夜闇
+  author: Koji Sakaguchi
+  instagram: ""
+  camera: "Sony ZV-E10 Mark II"
+  lens: ""
+  location: ""
+  shot_date: ""
+  settings:
+    aperture: "f/5.6"
+    shutter: "1/400"
+    iso: ""
+    wb: ""
+  ai_processing:
+    used: false
+    note: ""
+  images:
+    thumb: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai22_s.JPG"
+    full: "/2025/gakusai/2af262a415562b8849d6ab105bd0f438e062dd5912de91680106214e07239450/public-images/2025-gakusai22_s.JPG"
+  description: |
+    
