@@ -2,7 +2,7 @@
 # 必須: no, title, author, images.thumb, images.full
 # 任意: instagram, camera, lens, location, shot_date, settings, ai_processing, description
 
-- no: 1
+- "no": 1
   title: 夕華
   author: Betty
   instagram: "https://www.instagram.com/yib_photo/"
