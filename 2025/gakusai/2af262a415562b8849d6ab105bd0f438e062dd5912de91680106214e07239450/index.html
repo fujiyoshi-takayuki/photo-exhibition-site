@@ -8,10 +8,10 @@ title: 2025年度 学祭写真展 「燐光」 作品一覧
 
 <!-- ギャラリー -->
 <div class="work-gallery">
-  <p>DEBUG FILE KEYS: {{ site.data.works | keys | join: ", " }}</p>
+  <!-- <p>DEBUG FILE KEYS: {{ site.data.works | keys | join: ", " }}</p> --> <!-- for DEBUG -->
   {% assign works = site.data.works["2025-gakusai"] | default: site.data.works["2025_gakusai"] | sort: "no" %}
   {% for w in works %}
-  <p>DEBUG: {{ w.no | inspect }}</p>
+  <!-- <p>DEBUG: {{ w.no | inspect }}</p> --> <!-- for DEBUG -->
   <div class="work-card">
     <!-- 画像：保存抑止 + Lightbox 用 -->
     <div class="photo-wrapper" data-full="{{ w.images.full | relative_url }}">
@@ -21,11 +21,8 @@ title: 2025年度 学祭写真展 「燐光」 作品一覧
 
     <div class="work-info">
       <p class="work-number">
-        {% if w.no %}
-          No.{% if w.no < 10 %}0{% endif %}{{ w.no }}
-        {% else %}
-          No.--  <!-- no が未定義だった場合 -->
-        {% endif %}
+        {% assign num = w.no | plus: 0 %}
+          No.{% if num < 10 %}0{% endif %}{{ num }}
       </p>
       <p class="work-title">{{ w.title }}</p>
 
