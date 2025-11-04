@@ -1,7 +1,7 @@
 ---
 title: "2025学祭写真展の投票期間終了について"
 date: 2025-11-05
-exhibition: "gakusai"
+# exhibition: "gakusai"
 published: true
 ---
 
