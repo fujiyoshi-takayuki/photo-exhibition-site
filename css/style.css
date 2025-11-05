@@ -596,7 +596,8 @@ footer .disclaimer {
 
 /* ===== 結果カード上部を固定高さで統一 ===== */
 
-/* カード本体 */
+/* ===== 結果カード上部を固定高さで統一（改良版）===== */
+
 .result-card {
   display: flex;
   flex-direction: column;
@@ -608,55 +609,81 @@ footer .disclaimer {
   background: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  height: 100%; /* すべてのカードを同じ高さに */
 }
 
 /* 上部固定ヘッダー */
 .result-header {
   text-align: center;
   padding: 0.6em 0.4em;
-  height: 3.8em;               /* 高さ固定でズレ防止 */
+  height: 3.8em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid #ddd;
   border-radius: 8px 8px 0 0;
+  flex-shrink: 0; /* 縮まないように */
 }
 
-/* 順位 */
+/* 順位と獲得率 */
 .result-header h3 {
   margin: 0;
   font-size: 1.1em;
   font-weight: bold;
 }
-
-/* 獲得率 */
 .result-header .votes {
   margin: 0.2em 0 0;
   font-weight: bold;
   font-size: 0.9em;
 }
 
-/* 順位別カラー */
-.result-card.rank-1 .result-header { background: #ffe066; }  /* 金 */
-.result-card.rank-2 .result-header { background: #e0e0e0; }  /* 銀 */
-.result-card.rank-3 .result-header { background: #d7a46f; }  /* 銅 */
-.result-card.rank-4 .result-header { background: #99bbff; }  /* 青 */
-.result-card.rank-5 .result-header { background: #ccc; }     /* 灰 */
-
 /* 画像部分 */
 .result-card img {
   width: 100%;
   height: auto;
   display: block;
+  flex-grow: 1; /* 画像部分を中央で可変にする */
+  object-fit: cover;
 }
 
-/* 情報部分 */
+/* 下部情報ブロック */
 .result-info {
-  padding: 0.5em 0.8em;
+  padding: 0.6em 0.8em;
   background: #fafafa;
   border-top: 1px solid #ddd;
+  text-align: center;
+  flex-shrink: 0; /* 下部も固定 */
+  min-height: 5.5em; /* ←ここで高さを固定（ずれ防止）*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
+/* 個別のテキスト */
+.work-number {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+  font-size: 1em;
+  color: #444;
+}
+.work-title {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  font-size: 1.1em;
+}
+.work-author {
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* 順位別カラー */
+.result-card.rank-1 .result-header { background: #ffe066; }
+.result-card.rank-2 .result-header { background: #e0e0e0; }
+.result-card.rank-3 .result-header { background: #d7a46f; }
+.result-card.rank-4 .result-header { background: #99bbff; }
+.result-card.rank-5 .result-header { background: #ccc; }
+
 
 /* 　特別な修飾　 */
 .notice {
