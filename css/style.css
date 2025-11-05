@@ -558,37 +558,6 @@ footer .disclaimer {
   padding: 0 1em; /* 左右に少し余白 */
 }
 
-.result-card {
-  display: flex;
-  flex-direction: column; /* 縦に分割 */
-  justify-content: space-between; /* 上＝画像 / 下＝情報 */
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.result-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  flex-grow: 1; /* ← 画像部分が余白を埋める */
-}
-
-.result-info {
-  padding: 0.5em;
-  background: #f5f5f5;
-  border-top: 1px solid #ddd;
-}
-
-.result-info {
-  padding: 0.5em;
-  background: #f5f5f5;
-  border-top: 1px solid #ddd;
-}
-
 .result-number {
   font-weight: bold;
   margin-right: 0.5em;
@@ -625,64 +594,68 @@ footer .disclaimer {
   margin-top: 0.2em; /* 上に余白を少し */
 }
 
-/* ===== 結果概要ページ拡張 ===== */
+/* ===== 結果カード上部を固定高さで統一 ===== */
+
+/* カード本体 */
 .result-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-.result-card h3 {
-  background: #003366;
-  color: #fff;
+/* 上部固定ヘッダー */
+.result-header {
+  text-align: center;
+  padding: 0.6em 0.4em;
+  height: 3.8em;               /* 高さ固定でズレ防止 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+/* 順位 */
+.result-header h3 {
   margin: 0;
-  padding: 0.5em;
   font-size: 1.1em;
-}
-
-.result-card .votes {
-  margin: 0.4em 0;
   font-weight: bold;
-  color: #444;
 }
 
-/* 順位別の装飾 */
-.result-card.rank-1 h3 { background: gold; color: #222; }
-.result-card.rank-2 h3 { background: silver; color: #222; }
-.result-card.rank-3 h3 { background: #cd7f32; color: #fff; }
-.result-card.rank-4 h3 { background: #0066cc; }
-.result-card.rank-5 h3 { background: #666; }
-
-.result-card img {
-  border-top: 2px solid #ccc;
-}
-
-/* ===== 結果概要ページ拡張 ===== */
-.result-card {
-  position: relative;
-}
-
-.result-card h3 {
-  background: #003366;
-  color: #fff;
-  margin: 0;
-  padding: 0.5em;
-  font-size: 1.1em;
-}
-
-.result-card .votes {
-  margin: 0.4em 0;
+/* 獲得率 */
+.result-header .votes {
+  margin: 0.2em 0 0;
   font-weight: bold;
-  color: #444;
+  font-size: 0.9em;
 }
 
-/* 順位別の装飾 */
-.result-card.rank-1 h3 { background: gold; color: #222; }
-.result-card.rank-2 h3 { background: silver; color: #222; }
-.result-card.rank-3 h3 { background: #cd7f32; color: #fff; }
-.result-card.rank-4 h3 { background: #0066cc; }
-.result-card.rank-5 h3 { background: #666; }
+/* 順位別カラー */
+.result-card.rank-1 .result-header { background: #ffe066; }  /* 金 */
+.result-card.rank-2 .result-header { background: #e0e0e0; }  /* 銀 */
+.result-card.rank-3 .result-header { background: #d7a46f; }  /* 銅 */
+.result-card.rank-4 .result-header { background: #99bbff; }  /* 青 */
+.result-card.rank-5 .result-header { background: #ccc; }     /* 灰 */
 
+/* 画像部分 */
 .result-card img {
-  border-top: 2px solid #ccc;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 情報部分 */
+.result-info {
+  padding: 0.5em 0.8em;
+  background: #fafafa;
+  border-top: 1px solid #ddd;
 }
 
 /* 　特別な修飾　 */
