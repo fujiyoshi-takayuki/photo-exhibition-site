@@ -655,6 +655,36 @@ footer .disclaimer {
   border-top: 2px solid #ccc;
 }
 
+/* ===== 結果概要ページ拡張 ===== */
+.result-card {
+  position: relative;
+}
+
+.result-card h3 {
+  background: #003366;
+  color: #fff;
+  margin: 0;
+  padding: 0.5em;
+  font-size: 1.1em;
+}
+
+.result-card .votes {
+  margin: 0.4em 0;
+  font-weight: bold;
+  color: #444;
+}
+
+/* 順位別の装飾 */
+.result-card.rank-1 h3 { background: gold; color: #222; }
+.result-card.rank-2 h3 { background: silver; color: #222; }
+.result-card.rank-3 h3 { background: #cd7f32; color: #fff; }
+.result-card.rank-4 h3 { background: #0066cc; }
+.result-card.rank-5 h3 { background: #666; }
+
+.result-card img {
+  border-top: 2px solid #ccc;
+}
+
 /* 　特別な修飾　 */
 .notice {
   text-align: center;
