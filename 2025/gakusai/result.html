@@ -1,76 +1,67 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>2025学祭写真展 結果概要</title>
-    <link rel="stylesheet" href="../../css/style.css" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
-    />
-  </head>
-  <body>
-    <!-- 上段ヘッダー＋ナビをまとめる -->
-    <div id="header-wrapper">
-      <header id="main-header">
-        <div class="header-content">
-          <a href="../../"
-            ><img
-              src="../../images/club-icon.JPG"
-              alt="写真部アイコン"
-              class="logo"
-            />
-            <div class="site-title">
-              <h1>法政大学 小金井写真部</h1>
-              <p>写真展</p>
-            </div></a
-          >
-        </div>
-      </header>
+---
+layout: default
+title: 2025年度 学祭写真展 「燐光」 - 結果概要
+---
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="../../">トップ</a></li>
-          <li><a href="../summer/">2025夏写真展</a></li>
-          <li><a href="../winter/">2025冬写真展</a></li>
-        </ul>
-      </nav>
-    </div>
+<h2>2025年度 学祭写真展 「燐光」 - 結果概要</h2>
+<p>
+  投票にご参加いただきありがとうございました。<br />
+  以下に上位5作品を発表します。
+</p>
 
-    <!-- メインコンテンツ -->
-    <main>
-      <h2>2025年度 学祭写真展 結果概要</h2>
-      <p>投票いただきありがとうございました！</p>
+<div class="results-gallery">
+  {% assign all_works = site.data.works["2025-gakusai"] %}
+  {% assign results = site.data.results["2025-gakusai"] %}
 
-      <p><em>結果は近日公開予定です。</em></p>
+  {% for r in results %}
+    {% assign work = all_works | where: "no", r.no | first %}
+    {% assign percent = r.votes_ratio | times: 100 | round: 1 %}
 
-      <!-- 公開後に追記する例 -->
-      <!--
-    <h3>投票結果 TOP3</h3>
-    <ol>
-      <li>No.05「秋空」 - 40票</li>
-      <li>No.11「仲間たち」 - 33票</li>
-      <li>No.02「祭りの光景」 - 25票</li>
-    </ol>
-    -->
+    <div class="result-card rank-{{ r.rank }}">
+      <h3>第{{ r.rank }}位</h3>
+      <p class="votes">獲得率：{{ percent }}%</p>
 
-      <p style="text-align: center; margin-top: 2em">
-        <a href="./" class="button">← 戻る</a>
-      </p>
-    </main>
+      <!-- 画像 -->
+      <a href="{{ work.images.full | relative_url }}" target="_blank">
+        <img src="{{ work.images.thumb | relative_url }}"
+             alt="作品No.{{ work.no }} {{ work.title }} 作者: {{ work.author }}">
+      </a>
 
-    <!-- フッター -->
-    <footer>
-      <p>Copyright &copy; 2025 法政大学 小金井写真部 All Rights Reserved.</p>
-      <p>Designed by Takakichi</p>
-      <div class="sns-links">
-        <a href="https://www.instagram.com/photo_koganei" target="_blank"
-          >Instagram</a
-        >
-        |
-        <a href="https://x.com/koganei_photo" target="_blank">X</a>
+      <!-- 作品情報 -->
+      <div class="result-info">
+        <p class="work-number"><strong>No.{{ work.no }}</strong></p>
+        <p class="work-title">{{ work.title }}</p>
+
+        <p class="work-author"{% if work.instagram %} data-instagram="{{ work.instagram }}"{% endif %}>
+          {{ work.author }}
+          {% if work.instagram %}{% include insta-icon.html %}{% endif %}
+        </p>
+
+        {% if work.location %}
+          <p class="work-location">撮影地: {{ work.location }}</p>
+        {% endif %}
+
+        {% if work.camera %}
+          <p class="work-camera">{{ work.camera }}</p>
+        {% endif %}
+        {% if work.lens %}
+          <p class="work-lens">{{ work.lens }}</p>
+        {% endif %}
+
+        {% assign s = work.settings %}
+        {% if s.aperture or s.shutter or s.iso or s.wb %}
+          <p class="work-settings">
+            {% if s.shutter %}SS: {{ s.shutter }}{% endif %}
+            {% if s.aperture %}{% if s.shutter %} | {% endif %}絞り: {{ s.aperture }}{% endif %}
+            {% if s.iso %}{% if s.aperture or s.shutter %} | {% endif %}ISO: {{ s.iso }}{% endif %}
+            {% if s.wb %}{% if s.aperture or s.shutter or s.iso %} | {% endif %}WB: {{ s.wb }}{% endif %}
+          </p>
+        {% endif %}
       </div>
-    </footer>
-    <script src="../../js/script.js"></script>
-  </body>
-</html>
+    </div>
+  {% endfor %}
+</div>
+
+<p style="text-align: center; margin-top: 2em">
+  <a href="./" class="button">← 戻る</a>
+</p>
