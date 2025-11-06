@@ -548,9 +548,9 @@ footer .disclaimer {
   background: navy;
 }
 
-/* ===== 結果概要ページ (アスペクト比維持・2段構成版) ===== */
+/* ===== 結果概要ページ (アスペクト比維持・2段構成＋スマホ対応版) ===== */
 
-/* ギャラリー全体：上位3つと下位2つを段分け配置 */
+/* ギャラリー全体 */
 .results-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -559,7 +559,7 @@ footer .disclaimer {
   padding: 0 1em;
 }
 
-/* 特別配置：1〜3位を上段中央寄せ、4〜5位を下段 */
+/* PCでは2段構成（上位3作品＋下位2作品） */
 .results-gallery .result-card:nth-child(-n+3) {
   grid-row: 1;
 }
@@ -592,8 +592,8 @@ footer .disclaimer {
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid #ddd;
-  flex-shrink: 0;
   border-radius: 8px 8px 0 0;
+  flex-shrink: 0;
 }
 
 /* 順位別カラー */
@@ -618,7 +618,7 @@ footer .disclaimer {
 .result-card a {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 3 / 2; /* ← アスペクト比固定 */
   background-color: #f5f5f5;
 }
 .result-card img {
@@ -641,6 +641,7 @@ footer .disclaimer {
   min-height: 210px;
 }
 
+/* 各テキスト */
 .work-number {
   font-weight: bold;
   margin-bottom: 0.3em;
@@ -667,6 +668,35 @@ footer .disclaimer {
   margin-bottom: 0.15em;
 }
 
+/* ===== 📱 スマホ対応メディアクエリ ===== */
+@media (max-width: 768px) {
+  .results-gallery {
+    grid-template-columns: 1fr; /* スマホでは1列表示 */
+    gap: 1.2em;
+  }
+  .result-card {
+    max-width: 100%;
+  }
+  .result-header {
+    height: auto;
+    padding: 0.4em;
+  }
+  .result-header h3 {
+    font-size: 1em;
+  }
+  .result-header .votes {
+    font-size: 0.85em;
+  }
+  .work-title {
+    font-size: 1em;
+  }
+  .work-camera,
+  .work-lens,
+  .work-location,
+  .work-settings {
+    font-size: 0.75em;
+  }
+}
 
 /* 　特別な修飾　 */
 .notice {
